@@ -59,13 +59,11 @@ class Alignitems extends React.Component<{
 	  	const viewList = [];
 		const viewLists = [];
 		items.forEach((swatch,index)=>{
-				if(index%numberInARow==0){
-					viewList.length=0;
-				}
 				viewList.push(swatch);
 				if(index%numberInARow==numberInARow-1){
 					let temp = viewList.slice(0,numberInARow);
 					viewLists.push(temp);
+					viewList.length=0;
 				}
 			}
 		  )
